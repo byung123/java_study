@@ -14,8 +14,14 @@ public class Function02 {
         System.out.println("num2: " + num2);
     }
 
+    // 매개변수 o, return o
     String 빙수만들기(String 재료, int count) {
         return 재료 + "빙수: " + count + "개";
+    }
+
+    // 매개변수 x, return o
+    String getData() {
+        return "데이터";
     }
 
 }
