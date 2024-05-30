@@ -160,4 +160,31 @@ public class BookRepository {
         }
         return searchBooks;
     }
+
+    private int IndexOfBookId(int bookId) {
+        int findIndex = -1;
+
+        for( int i = 0; i < books.length; i++) {
+            if(books[i].getBookcode() == bookId) {
+                findIndex = i;
+                break;
+            }
+        }
+        return findIndex;
+    }
+
+    public void deleteBookByBookId(int bookId) {
+        int findIndex = IndexOfBookId(bookId);
+        BookEntity[] newBooks = new BookEntity[books.length - 1]; // 삭제하려면 크기가 하나 작은 배열을 새로 생성해야함
+
+        for(int i = 0; i < newBooks.length; i++) {
+            if(i < findIndex) {
+                newBooks[i] = books[i];
+                continue;
+            }
+            newBooks[i] = books[i + 1];
+        }
+
+        books = newBooks;
+    }
 }
