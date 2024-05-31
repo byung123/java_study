@@ -1,6 +1,7 @@
 package com.study.java_study.ch09_클래스04;
 
 import java.awt.print.Book;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BookService {
@@ -11,6 +12,42 @@ public class BookService {
     public BookService() {
         scanner = new Scanner(System.in);
         bookRepository = new BookRepository();
+    }
+
+    private String select2Menu() {                   // 배열일 때 방법
+        String[] menus2 = {"1", "2", "3", "4", "5"};
+        String selectedMenu2 = null;
+        boolean isFind = false;
+
+        while(!isFind) {
+            System.out.print("메뉴 선택: ");
+            selectedMenu2 = scanner.nextLine();
+
+            for(int i = 0; i < menus2.length; i++) {
+                if(menus2[i].equals(selectedMenu2)) {
+                    isFind = true;
+                    break;
+                }
+                System.out.println("잘못된 입력입니다. 다시 입력하세요.");
+            }
+        }
+        return selectedMenu2;
+    }
+
+    private String select3Menu() {                    // Arrays.binarySearch로 찾는 방법
+        String[] menus3 = {"1", "2", "3", "4", "5"};
+        String selectedMenu3 = null;
+
+        while(true) {
+            System.out.print("메뉴 선택: ");
+            selectedMenu3 = scanner.nextLine();
+
+            if(Arrays.binarySearch(menus3, selectedMenu3) > -1) {
+                break;
+            }
+            System.out.println("잘못된 입력입니다. 다시 입력하세요.");
+        }
+        return selectedMenu3;
     }
 
     private String selectMenu() {

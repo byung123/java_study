@@ -25,6 +25,7 @@ public class BookRepository {
 
         // 기존의 배열이 들어있는 books의 변수에 새로운 배열의 주소를 대입한다.
         books = newBooks;
+//        books = Arrays.copyOf(books, books.length + 1); // 이렇게 쓰면 위에 코드 안 써도 된다.
     }
 
     private int getLastIndex() {
