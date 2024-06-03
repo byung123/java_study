@@ -4,6 +4,7 @@ package com.study.java_study.ch15_Static;
     스태틱(static)
     1. 공유 영역
     2. 스태틱 변수나 메소드는 클래스명. 을 통해 접근한다.
+
  */
 public class StaticMain01 {
 
