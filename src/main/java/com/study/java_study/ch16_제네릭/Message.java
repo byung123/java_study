@@ -8,5 +8,7 @@ import lombok.Data;
 
 public class Message<T> {
     private T message;
+    private T num;
+
 
 }

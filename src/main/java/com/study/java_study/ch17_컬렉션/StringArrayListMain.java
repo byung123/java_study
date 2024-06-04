@@ -14,7 +14,7 @@ public class StringArrayListMain {
 
         // 배열 <-> 리스트 변환
         List<String> list = Arrays.asList(strArray); //  배열을 리스트로 만드는 방법(그냥 리스트)
-//        ArrayList<String> list2 (ArrayList<>) Arrays.asList(strArray); //  배열을 ArrayList로 만들기
+//        ArrayList<String> list2 = (ArrayList<>) Arrays.asList(strArray); //  배열을 ArrayList로 만들기
         ArrayList<String> list2 = new ArrayList<>();
         list2.addAll(list);
         String[] strArray2 = strList.toArray(new String[strList.size()]); // 리스트에서 배열로 만드는 방법
@@ -38,7 +38,7 @@ public class StringArrayListMain {
         strList.add("김준이");
         strList.add("김준삼");
         System.out.println(strList);
-        System.out.println(strList.remove("test2"));  // true, fallse 출력
+        System.out.println(strList.remove("test2"));  // true, false 출력
         strList.remove("test2");
         System.out.println(strList);
         System.out.println(strList.remove(1));  // 지운 값 출력

@@ -16,7 +16,7 @@ public class StringHashSetMain {
         System.out.println(strSet);  // Hash 값에 의해서 정렬된 채로 들어가짐
 
         for(String name : strSet) { // set은 순서가 없기 때문에 인덱스를 이용한 반복문을 사용하면 안된다. for each 반복문 사용
-            System.out.println(Objects.hash(name));
+            System.out.println(Objects.hash(name));  // 값이 나오는게 아닌 해쉬 주소가 출력
         }
 
         strSet.addAll(List.of("김준일", "김준이", "김준일"));   // set은 중복이 안되기 때문에 addAll로 추가해도 같은 값들이 추가되지 않는다
