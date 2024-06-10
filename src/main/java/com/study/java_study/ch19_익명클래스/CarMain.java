@@ -17,6 +17,5 @@ public class CarMain {
                 System.out.println("자동차 정보...");
             }
         };
-
     }
 }

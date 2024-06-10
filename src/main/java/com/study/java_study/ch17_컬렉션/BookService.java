@@ -34,12 +34,12 @@ public class BookService {
     );
 
     public void run1() {
-        System.out.println("조서 전체 정보를 요청합니다.");
+        System.out.println("도서 전체 정보를 요청합니다.");
         run2();
     }
 
     public void run2() {
-        System.out.println("조서 전체 정보 요청을 받았습니다.");
+        System.out.println("도서 전체 정보 요청을 받았습니다.");
         List<BookEntity> bookEntities = run3();
         BookRequestDto bookRequestDto = new BookRequestDto(200, "조회 완료", bookEntities);
         run4(bookRequestDto);
